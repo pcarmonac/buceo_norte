@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buceo certificado PADI y CMAS en Iquique. Cursos de buceo, excursiones guiadas y turismo subacuático en el norte de Chile.">
+    <meta name="keywords" content="buceo Iquique, cursos PADI, certificación CMAS, turismo subacuático, buceo en Chile, excursiones de buceo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buceonorte.cl/">
+    <meta property="og:title" content="Buceo Norte Iquique - Centro Certificado PADI & CMAS">
+    <meta property="og:description" content="Vive la experiencia del buceo profesional en Iquique con instructores certificados. Cursos desde nivel básico hasta avanzado.">
+    <meta property="og:image" content="https://buceonorte.cl/images/diver.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buceonorte.cl/">
+    <meta property="twitter:title" content="Buceo Norte Iquique - Centro Certificado PADI & CMAS">
+    <meta property="twitter:description" content="Vive la experiencia del buceo profesional en Iquique con instructores certificados. Cursos desde nivel básico hasta avanzado.">
+    <meta property="twitter:image" content="https://buceonorte.cl/images/diver.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DivingCenter",
+      "name": "Buceo Norte Iquique",
+      "image": "https://buceonorte.cl/images/bn_logo.jpg",
+      "@id": "",
+      "url": "https://buceonorte.cl/",
+      "telephone": "+56989016102",
+      "priceRange": "CLP$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Costanera",
+        "addressLocality": "Iquique",
+        "addressRegion": "Tarapacá",
+        "postalCode": "1100000",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -20.2317,
+        "longitude": -70.1356
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
+    <title>Buceo Norte Iquique | Centro Certificado PADI & CMAS - Cursos de Buceo Profesional</title>
+    <link rel="icon" href="images/bn_logo.jpg" type="image/jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="google-reviews.js"></script>
+  <script src="team-modal.js"></script>
+  <script src="prices-modal.js"></script>
+  <script src="booking-modal.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'caribbean': {
+                            '50': '#f0f9ff',
+                            '100': '#e0f2fe',
+                            '200': '#bae6fd',
+                            '300': '#7dd3fc',
+                            '400': '#38bdf8',
+                            '500': '#0ea5e9',
+                            '600': '#0284c7',
+                            '700': '#0369a1',
+                            '800': '#075985',
+                            '900': '#0c4a6e',
+                        },
+                        'drysuit-orange': '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-section {
+            background-image: url('images/diver.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .hero-overlay {
+            background-color: transparent;
+        }
+        
+        .section {
+            scroll-margin-top: 80px;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Mejoras para imágenes y layout móvil */
+        .team-member-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .project-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+                height: 85vh;
+                padding-top: 60px;
+                background-position: center;
+            }
+            
+            .hero-overlay {
+                padding-top: 30px;
+                background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.2) 100%);
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .team-member {
+                width: 100%;
+                max-width: 150px;
+                margin: 0 auto;
+            }
+
+            .project-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .project-image {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-member {
+                max-width: 200px;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 text-white shadow-lg z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <a href="#" class="text-2xl font-bold text-drysuit-orange flex items-center"><img src="images/bn_logo.jpg" class="h-8 mr-2" alt="Logo Buceo Norte">Buceo Norte</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-drysuit-orange transition"><i class="fas fa-home mr-1"></i> <span class="lang-home">Inicio</span></a>
+                    <a href="#about" class="hover:text-drysuit-orange transition"><i class="fas fa-info-circle mr-1"></i> <span class="lang-about">Nosotros</span></a>
+                    <a href="#courses" class="hover:text-drysuit-orange transition"><i class="fas fa-graduation-cap mr-1"></i> <span class="lang-courses">Cursos</span></a>
+                    <a href="#services" class="hover:text-drysuit-orange transition"><i class="fas fa-swimming-pool mr-1"></i> <span class="lang-services">Servicios</span></a>
+                    <a href="#projects" class="hover:text-drysuit-orange transition"><i class="fas fa-seedling mr-1"></i> <span class="lang-projects">Proyectos</span></a>
+                    <a href="#" onclick="showPricesModal()" class="text-drysuit-orange hover:text-orange-600 transition"><i class="fas fa-tag mr-1"></i> <span class="lang-prices">Precios</span></a>
+                    <a href="#contact" class="hover:text-drysuit-orange transition"><i class="fas fa-envelope mr-1"></i> <span class="lang-contact">Contacto</span></a>
+                </nav>
+            </div>
+            <div class="flex items-center justify-end gap-8 ml-12">
+                <div class="flex items-center gap-6">
+                    <div class="flex border border-gray-600 rounded-md overflow-hidden">
+                        <button id="lang-es" class="px-3 py-1 bg-gray-800 text-white hover:bg-drysuit-orange transition flex items-center">
+                            <span class="mr-1">🇨🇱</span> <span>ES</span>
+                        </a>
+                        <button id="lang-en" class="px-3 py-1 bg-gray-700 text-gray-300 hover:bg-drysuit-orange transition flex items-center">
+                            <span class="mr-1">🇺🇸</span> <span>EN</span>
+                        </a>
+                    </div>
+                    <div class="h-6 w-px bg-gray-600"></div>
+                    <div class="flex border border-gray-600 rounded-md overflow-hidden">
+                        <button id="currency-clp" class="px-3 py-1 bg-gray-800 text-white hover:bg-drysuit-orange transition">CLP</a>
+                        <button id="currency-usd" class="px-3 py-1 bg-gray-700 text-gray-300 hover:bg-drysuit-orange transition">USD</a>
+                    </div>
+                    <button onclick="showBookingModal()" class="ml-4 px-4 py-2 bg-drysuit-orange hover:bg-black hover:border-white border-2 border-transparent text-white font-medium rounded-md transition-colors duration-300 whitespace-nowrap">Reserva tu buceo</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden fixed bottom-4 right-4 z-50">
+        <button id="mobile-menu-button" class="bg-drysuit-orange text-white p-4 rounded-full shadow-lg" aria-label="Menú principal">
+            <i class="fas fa-bars text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 bg-opacity-90 z-40 hidden flex items-center justify-center">
+        <div class="text-center">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </a>
+            <nav class="flex flex-col space-y-6 text-2xl">
+                <a href="#home" class="text-white hover:text-drysuit-orange transition"><i class="fas fa-home mr-2"></i> <span class="lang-home">Inicio</span></a>
+                <a href="#about" class="text-white hover:text-drysuit-orange transition"><i class="fas fa-info-circle mr-2"></i> <span class="lang-about">Nosotros</span></a>
+                <a href="#courses" class="text-white hover:text-drysuit-orange transition"><i class="fas fa-graduation-cap mr-2"></i> <span class="lang-courses">Cursos</span></a>
+                <a href="#services" class="text-white hover:text-drysuit-orange transition"><i class="fas fa-swimming-pool mr-2"></i> <span class="lang-services">Servicios</span></a>
+                <a href="#projects" class="text-white hover:text-drysuit-orange transition"><i class="fas fa-seedling mr-2"></i> <span class="lang-projects">Proyectos</span></a>
+                <a href="#" onclick="showPricesModal()" class="text-drysuit-orange hover:text-orange-600 transition"><i class="fas fa-tag mr-2"></i> <span class="lang-prices">Precios</span></a>
+                <a href="#contact" class="text-white hover:text-drysuit-orange transition"><i class="fas fa-envelope mr-2"></i> <span class="lang-contact">Contacto</span></a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section section">
+        <div class="hero-overlay absolute inset-0 flex items-center justify-center">
+            <div class="container mx-auto px-4 text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in" data-delay="0.2s">
+                    <span class="lang-hero-title">Buceo Profesional en Iquique - Certificaciones PADI & CMAS</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto fade-in" data-delay="0.4s">
+                    <span class="lang-hero-subtitle">Aventuras certificadas PADI & CMAS en Iquique</span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in" data-delay="0.6s">
+                    <a href="#courses" class="bg-drysuit-orange hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                        <span class="lang-cta-courses">Ver Cursos</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="showBookingModal()" class="bg-transparent hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300 cursor-pointer">
+                        <span class="lang-cta-book">Reserva tu Buceo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <span class="lang-about-title">Centro de Buceo Certificado en Iquique</span>
+                </h2>
+                <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    <span class="lang-about-text">Buceo Norte es el centro de buceo líder en Iquique, especializado en cursos PADI y CMAS. Nuestro equipo de instructores certificados te guiará en cada paso de tu aventura submarina.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                        <span class="lang-about-mission">Nuestra Misión</span>
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        <span class="lang-about-mission-text">Proporcionar experiencias de buceo seguras y memorables mientras promovemos la conservación del medio marino de las costas de Iquique.</span>
+                    </p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                        <span class="lang-about-certifications">Certificaciones</span>
+                    </h3>
+                    <div class="flex items-center space-x-8">
+                        <a href="https://www.padi.com" target="_blank">
+                            <img src="images/PADI.png" alt="PADI" class="h-16 transition-transform duration-300 hover:scale-105">
+                        </a>
+                        <a href="https://www.cmas.org" target="_blank">
+                            <img src="images/CMAS.png" alt="CMAS" class="h-16 transition-transform duration-300 hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                        <span class="lang-diving-team">Nuestro Equipo</span>
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 team-grid">
+                        <!-- Hector -->
+                        <div class="flex flex-col items-center team-member">
+                            <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-caribbean-500 mb-3 cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:scale-105" onclick="showTeamMember('hector')">
+                                <img src="images/Hector.jpeg" alt="Hector - Instructor de Buceo" class="team-member-img">
+                            </div>
+                            <h4 class="font-bold text-gray-800">Hector</h4>
+                            <p class="text-sm text-gray-600 text-center">Instructor</p>
+                        </div>
+                        <!-- Anibal -->
+                        <div class="flex flex-col items-center team-member">
+                            <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-caribbean-500 mb-3 cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:scale-105" onclick="showTeamMember('anibal')">
+                                <img src="images/Anibal.jpeg" alt="Anibal - Instructor CMAS en buceo profesional Iquique" class="team-member-img" aria-label="Instructor certificado">
+                            </div>
+                            <h4 class="font-bold text-gray-800">Anibal</h4>
+                            <p class="text-sm text-gray-600 text-center">Instructor</p>
+                        </div>
+                        <!-- Rodrigo -->
+                        <div class="flex flex-col items-center team-member">
+                            <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-caribbean-500 mb-3 cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:scale-105" onclick="showTeamMember('rodrigo')">
+                                <img src="images/Rodrigo.jpeg" alt="Rodrigo - Especialista en buceo avanzado PADI Iquique" class="team-member-img" aria-label="Instructor avanzado">
+                            </div>
+                            <h4 class="font-bold text-gray-800">Rodrigo</h4>
+                            <p class="text-sm text-gray-600 text-center">Instructor</p>
+                        </div>
+                        <!-- Sergio -->
+                        <div class="flex flex-col items-center team-member">
+                            <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-caribbean-500 mb-3 cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:scale-105" onclick="showTeamMember('sergio')">
+                                <img src="images/Sergio.jpeg" alt="Sergio - Staff de Buceo" class="team-member-img">
+                            </div>
+                            <h4 class="font-bold text-gray-800">Sergio</h4>
+                            <p class="text-sm text-gray-600 text-center">Staff</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gradient-to-b from-white to-caribbean-50 section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <span class="lang-courses-title">Nuestros Cursos</span>
+                </h2>
+                <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    <span class="lang-courses-subtitle">Ofrecemos una variedad de cursos para todos los niveles, desde principiantes hasta buzos avanzados.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 fade-in">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-swimmer text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span class="lang-course1-title">Open Water Diver</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span class="lang-course1-desc">Certificación inicial para comenzar tu aventura submarina.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-water text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span class="lang-course2-title">Advanced Open Water</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span class="lang-course2-desc">Amplía tus habilidades y profundiza tu experiencia de buceo.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-ship text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span class="lang-course3-title">Rescue Diver</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span class="lang-course3-desc">Aprende a prevenir y manejar emergencias de buceo.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="#all-courses" class="inline-block bg-drysuit-orange hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    <span class="lang-all-courses">Ver Todos los Cursos</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Courses Section -->
+    <section id="all-courses" class="py-20 bg-gradient-to-b from-caribbean-50 to-white section hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <span class="lang-all-courses-title">Todos Nuestros Cursos</span>
+                </h2>
+                <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    <span class="lang-all-courses-subtitle">Explora nuestra completa oferta de cursos de buceo para todos los niveles</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 fade-in">
+                <!-- Discovery Scuba Diving -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-fish text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Discovery Scuba Diving</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Tu primera experiencia de buceo sin necesidad de certificación previa.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bubble Maker -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-child text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Bubble Maker</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Programa especial para niños de 8 a 10 años que quieren experimentar el buceo.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Open Water Diver -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-swimmer text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Open Water Diver</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Certificación inicial para comenzar tu aventura submarina.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Open Water Diver -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-water text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Advanced Open Water Diver</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Amplía tus habilidades y profundiza tu experiencia de buceo.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rescue Diver -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-ship text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Rescue Diver</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Aprende a prevenir y manejar emergencias de buceo.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Divemaster -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Divemaster</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Primer nivel profesional en el mundo del buceo.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Buzo Comercial -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="h-48 bg-caribbean-600 flex items-center justify-center">
+                        <i class="fas fa-hard-hat text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <span>Buzo Comercial</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            <span>Formación profesional para trabajos submarinos industriales.</span>
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#contact" class="text-caribbean-600 hover:text-caribbean-800 font-medium">
+                                <span class="lang-more-info">Más Info</span> <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-caribbean-800 text-white section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="lang-services-title">Nuestros Servicios</span>
+                </h2>
+                <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto opacity-90">
+                    <span class="lang-services-subtitle">Además de cursos, ofrecemos una variedad de servicios para buzos certificados.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+                <!-- Service 1 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service1-title">Alquiler de Equipo</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service1-desc">Equipo completo para buceo recreativo y técnico.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-compass text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service2-title">Buceos Guiados</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service2-desc">Explora los mejores sitios de buceo de Iquique con nuestros guías expertos.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wind text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service3-title">Recargas de Nitrox</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service3-desc">Mejora tus inmersiones con nuestro servicio de recarga de Nitrox.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-ship text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service4-title">Buceo en Naufragios</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service4-desc">Excursiones especializadas a los famosos naufragios de la zona.</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="#all-services" class="inline-block bg-drysuit-orange hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    <span class="lang-all-services">Ver Todos los Servicios</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Services Section -->
+    <section id="all-services" class="py-20 bg-gradient-to-b from-caribbean-800 to-caribbean-600 text-white section hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="lang-all-services-title">Todos Nuestros Servicios</span>
+                </h2>
+                <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto opacity-90">
+                    <span class="lang-all-services-subtitle">Explora nuestra completa oferta de servicios de buceo profesionales</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 fade-in">
+                <!-- Service 1 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service1-title">Alquiler de Equipo</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service1-desc">Equipo completo para buceo recreativo y técnico.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-compass text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service2-title">Buceos Guiados</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service2-desc">Explora los mejores sitios de buceo de Iquique con nuestros guías expertos.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wind text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service3-title">Recargas de Nitrox</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service3-desc">Mejora tus inmersiones con nuestro servicio de recarga de Nitrox.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-ship text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service4-title">Buceo en Naufragios</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service4-desc">Excursiones especializadas a los famosos naufragios de la zona.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-camera text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service5-title">Fotografía Submarina</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service5-desc">Alquiler de equipos y cursos especializados de fotografía bajo el agua.</span>
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-caribbean-700 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105">
+                    <div class="bg-caribbean-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wrench text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-service6-title">Mantenimiento de Equipos</span>
+                    </h3>
+                    <p class="opacity-90">
+                        <span class="lang-service6-desc">Servicio técnico especializado para todo tipo de equipos de buceo.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  
+  <!-- Google Reviews Section -->
+  <section id="projects" class="py-20 bg-white section">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <span class="lang-projects-title">Nuestros Proyectos</span>
+            </h2>
+            <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                <span class="lang-projects-description">Con nuestros proyectos y exploraciones, protegemos el medio ambiente submarino. Junto con colaboradores como tú, buscamos mantener los ecosistemas submarinos más saludables. Revisa nuestra propuesta.</span>
+            </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 fade-in">
+            <div class="group cursor-pointer">
+                <div class="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    <img src="images/pond.jpg" alt="Proyecto ambiental" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <p class="text-sm font-medium">Proyectos para ayudar al medio ambiente submarino</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    <img src="images/explorations.jpg" alt="Expediciones" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <p class="text-sm font-medium">Nuestras expediciones en aguas abiertas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    <img src="images/eco-diver.jpg" alt="Protección ecosistemas" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <p class="text-sm font-medium">Ayúdanos a proteger los ecosistemas submarinos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="google-reviews" class="py-20 bg-gradient-to-b from-white to-gray-50 section">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <span class="lang-google-reviews-title">Reseñas de Google</span>
+        </h2>
+        <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          <span class="lang-google-reviews-subtitle">Lo que nuestros clientes dicen sobre nosotros en Google</span>
+        </p>
+      </div>
+      
+      <div id="google-reviews-container" class="grid md:grid-cols-3 gap-8 fade-in">
+        <!-- Las reseñas de Google se cargarán aquí dinámicamente -->
+      </div>
+      
+      <div class="text-center mt-12 fade-in" id="google-review-link">
+        <!-- El enlace para escribir una reseña se cargará aquí dinámicamente -->
+      </div>
+    </div>
+  </section>
+  
+
+        
+        <!-- Las reseñas se cargan dinámicamente desde google-reviews.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100 section">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <span class="lang-contact-title">Contáctanos</span>
+        </h2>
+        <div class="w-20 h-1 bg-drysuit-orange mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          <span class="lang-contact-subtitle">Reserva tu curso o buceo, o simplemente escríbenos tus preguntas.</span>
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 fade-in">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <span class="lang-contact-info">Información de Contacto</span>
+          </h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-drysuit-orange text-white p-3 rounded-full mr-4">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">
+                  <span class="lang-address-title">Dirección</span>
+                </h4>
+                <p class="text-gray-600">
+                  Muelle ex ballenera - Enrique Brenner s/n,<br>
+                  Iquique, Tarapacá, Chile
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-drysuit-orange text-white p-3 rounded-full mr-4">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">
+                  <span class="lang-phone-title">Teléfono</span>
+                </h4>
+                <a href="tel:+56989016102" class="text-gray-600 hover:text-drysuit-orange transition">+56 9 8901 6102</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-drysuit-orange text-white p-3 rounded-full mr-4">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">
+                  <span class="lang-email-title">Email</span>
+                </h4>
+                <a href="mailto:info@buceonorte.cl" class="text-gray-600 hover:text-drysuit-orange transition">info@buceonorte.cl</a>
+              </div>
+            </div>
+            
+            <div class="pt-4">
+              <h4 class="font-bold text-gray-800 mb-4">
+                <span class="lang-follow-us">Síguenos</span>
+              </h4>
+              <div class="flex space-x-4">
+                <a href="https://www.instagram.com/buceonorte_iquique/" class="text-gray-400 hover:text-white transition duration-300">
+                  <i class="fab fa-instagram text-2xl"></i>
+              </a>
+                <a href="https://www.facebook.com/buceonorte.cl" class="text-gray-400 hover:text-white transition duration-300">
+                <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                  <i class="fab fa-youtube text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-bold text-gray-800 mb-4">
+              <span class="lang-map-title">Ubicación</span>
+            </h4>
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.0692493371675!2d-70.13470752397059!3d-20.29740058117522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9152159530f7f9e1%3A0xb2165f1c4221be75!2sBuceo%20Norte!5e0!3m2!1ses!2scl!4v1743726112705!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <span class="lang-contact-form-title">Formulario de Contacto</span>
+          </h3>
+          
+          <form id="contactForm" class="space-y-6">
+            <div>
+              <label for="name" class="block text-gray-700 font-medium mb-2">
+                <span class="lang-form-name">Nombre</span>
+              </label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-drysuit-orange focus:border-drysuit-orange outline-none transition">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-gray-700 font-medium mb-2">
+                <span class="lang-form-email">Email</span>
+              </label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-drysuit-orange focus:border-drysuit-orange outline-none transition">
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-gray-700 font-medium mb-2">
+                <span class="lang-form-subject">Asunto</span>
+              </label>
+              <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-drysuit-orange focus:border-drysuit-orange outline-none transition">
+                <option value="" selected disabled>
+                  <span class="lang-form-subject-select">Selecciona una opción</span>
+                </option>
+                <option value="course">
+                  <span class="lang-form-subject-course">Consulta sobre cursos</span>
+                </option>
+                <option value="equipment">
+                  <span class="lang-form-subject-equipment">Alquiler de equipo</span>
+                </option>
+                <option value="other">
+                  <span class="lang-form-subject-other">Otra consulta</span>
+                </option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-gray-700 font-medium mb-2">
+                <span class="lang-form-message">Mensaje</span>
+              </label>
+              <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-drysuit-orange focus:border-drysuit-orange outline-none transition"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-drysuit-orange hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+              <span class="lang-form-submit">Enviar Mensaje</span>
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold text-drysuit-orange mb-4">Buceo Norte</h3>
+          <p class="text-gray-400">
+            <span class="lang-footer-about">Centro de buceo PADI & CMAS en Iquique, Chile. Especializados en cursos y buceos recreativos.</span>
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">
+            <span class="lang-footer-links">Enlaces</span>
+          </h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-drysuit-orange transition"><span class="lang-home">Inicio</span></a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-drysuit-orange transition"><span class="lang-about">Nosotros</span></a></li>
+            <li><a href="#courses" class="text-gray-400 hover:text-drysuit-orange transition"><span class="lang-courses">Cursos</span></a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-drysuit-orange transition"><span class="lang-services">Servicios</span></a></li>
+            <li><a href="#google-reviews" class="text-gray-400 hover:text-drysuit-orange transition"><span class="lang-reviews">Reseñas</span></a></li>
+            <li><a href="#" onclick="showPricesModal()" class="text-drysuit-orange hover:text-orange-700 transition font-medium"><span class="lang-prices">Precios</span></a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-drysuit-orange transition"><span class="lang-contact">Contacto</span></a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">
+            <span class="lang-footer-contact">Contacto</span>
+          </h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2 text-drysuit-orange"></i>
+              <span>Muelle ex ballenera, Iquique</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-2 text-drysuit-orange"></i>
+              <a href="tel:+56989016102" class="hover:text-drysuit-orange transition">+56 9 8901 6102</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-2 text-drysuit-orange"></i>
+              <a href="mailto:info@buceonorte.cl" class="hover:text-drysuit-orange transition">info@buceonorte.cl</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">
+            <span class="lang-footer-social">Redes Sociales</span>
+          </h4>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/buceonorte_iquique/" class="bg-gray-800 hover:bg-drysuit-orange w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-instagram"></i></a>
+            </a>
+            <a href="https://www.facebook.com/buceonorte.cl" class="bg-gray-800 hover:bg-drysuit-orange w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-drysuit-orange w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/+56989016102" class="bg-gray-800 hover:bg-drysuit-orange w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>
+          <span class="lang-footer-copyright">© 2023 Buceo Norte Iquique. Todos los derechos reservados.</span>
+        </p>
+        <p class="mt-2">
+          <span class="lang-footer-love">Hecho con amor ❤️ desde Iquique, Chile</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Team Modal -->
+  <div id="teamModal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-75 transition-opacity duration-300" onclick="closeTeamModal()"></div>
+    <div class="relative max-w-2xl mx-auto mt-20 bg-white rounded-lg p-8 transform transition-all duration-300">
+      <button class="absolute top-4 right-4 text-gray-600 hover:text-drysuit-orange transition" onclick="closeTeamModal()">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+      <div class="flex flex-col md:flex-row gap-6">
+        <img id="modalImage" src="" alt="" class="w-48 h-48 rounded-full object-cover mx-auto">
+        <div class="flex-1">
+          <h3 id="modalName" class="text-2xl font-bold text-gray-800 mb-2"></h3>
+          <p id="modalRole" class="text-drysuit-orange font-medium mb-4"></p>
+          <p id="modalBio" class="text-gray-600"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-75 transition-opacity" onclick="closeBookingModal()"></div>
+    <div class="relative max-w-4xl mx-auto mt-20 bg-gray-800 rounded-lg p-8 transform transition-all duration-300 scale-95 opacity-0 modal-content h-[95vh] overflow-y-auto">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-drysuit-orange" onclick="closeBookingModal()">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+      <iframe 
+        src="https://script.google.com/macros/s/AKfycbyMb4wH6YoUe9vidK5uxU9OsFv5xReqliCmkWVY_OtqYUe94F_PKtoHLm-eM5vpns_m/exec"
+        class="w-full h-[900px] rounded-lg"
+        frameborder="0"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Language and Currency Data -->
+  <script>
+    // Language data
+    const languageData = {
+      es: {
+        // Header
+        'home': 'Inicio',
+        'about': 'Nosotros',
+        'courses': 'Cursos',
+        'services': 'Servicios',
+        'contact': 'Contacto',
+        'signin': 'Iniciar Sesión',
+        'register': 'Registrarse',
+        
+        // Hero
+        'hero-title': 'Bienvenido a Buceo Norte',
+        'hero-subtitle': 'Aventuras certificadas PADI & CMAS en Iquique',
+        'cta-courses': 'Ver Cursos',
+        'cta-book': 'Reserva tu Buceo',
+        
+        // About
+        'about-title': 'Sobre Nosotros',
+        'about-text': 'Buceo Norte es el centro de buceo líder en Iquique, especializado en cursos PADI y CMAS. Nuestro equipo de instructores certificados te guiará en cada paso de tu aventura submarina.',
+        'about-mission': 'Nuestra Misión',
+        'about-mission-text': 'Proporcionar experiencias de buceo seguras y memorables mientras promovemos la conservación del medio marino de las costas de Iquique.',
+        'about-certifications': 'Certificaciones',
+        
+        // Courses
+        'courses-title': 'Nuestros Cursos',
+        'courses-subtitle': 'Ofrecemos una variedad de cursos para todos los niveles, desde principiantes hasta buzos avanzados.',
+        'course1-title': 'Open Water Diver',
+        'course1-desc': 'Certificación inicial para comenzar tu aventura submarina.',
+        'course2-title': 'Advanced Open Water',
+        'course2-desc': 'Amplía tus habilidades y profundiza tu experiencia de buceo.',
+        'course3-title': 'Rescue Diver',
+        'course3-desc': 'Aprende a prevenir y manejar emergencias de buceo.',
+        'more-info': 'Más Info',
+        'all-courses': 'Ver Todos los Cursos',
+        'all-courses-title': 'Todos Nuestros Cursos',
+        'all-courses-subtitle': 'Explora nuestra completa oferta de cursos de buceo para todos los niveles',
+        
+        // Services
+        'services-title': 'Nuestros Servicios',
+        'services-subtitle': 'Además de cursos, ofrecemos una variedad de servicios para buzos certificados.',
+        'service1-title': 'Alquiler de Equipo',
+        'service1-desc': 'Equipo completo para buceo recreativo y técnico.',
+        'service2-title': 'Buceos Guiados',
+        'service2-desc': 'Explora los mejores sitios de buceo de Iquique con nuestros guías expertos.',
+        'service3-title': 'Recargas de Nitrox',
+        'service3-desc': 'Mejora tus inmersiones con nuestro servicio de recarga de Nitrox.',
+        'service4-title': 'Buceo en Naufragios',
+        'service4-desc': 'Excursiones especializadas a los famosos naufragios de la zona.',
+        'service5-title': 'Fotografía Submarina',
+        'service5-desc': 'Alquiler de equipos y cursos especializados de fotografía bajo el agua.',
+        'service6-title': 'Mantenimiento de Equipos',
+        'service6-desc': 'Servicio técnico especializado para todo tipo de equipos de buceo.',
+        'all-services': 'Ver Todos los Servicios',
+        'all-services-title': 'Todos Nuestros Servicios',
+        'all-services-subtitle': 'Explora nuestra completa oferta de servicios de buceo profesionales',
+        
+        // Las referencias a testimonios han sido eliminadas
+        
+        // Contact
+        'contact-title': 'Contáctanos',
+        'contact-subtitle': 'Reserva tu curso o buceo, o simplemente escríbenos tus preguntas.',
+        'contact-info': 'Información de Contacto',
+        'address-title': 'Dirección',
+        'phone-title': 'Teléfono',
+        'email-title': 'Email',
+        'follow-us': 'Síguenos',
+        'map-title': 'Ubicación',
+        'contact-form-title': 'Formulario de Contacto',
+        'form-name': 'Nombre',
+        'form-email': 'Email',
+        'form-subject': 'Asunto',
+        'form-subject-select': 'Selecciona una opción',
+        'form-subject-course': 'Consulta sobre cursos',
+        'form-subject-dive': 'Reserva de buceo',
+        'form-subject-equipment': 'Alquiler de equipo',
+        'form-subject-other': 'Otra consulta',
+        'form-message': 'Mensaje',
+        'form-submit': 'Enviar Mensaje',
+        
+        // Footer
+        'footer-about': 'Centro de buceo PADI & CMAS en Iquique, Chile. Especializados en cursos y buceos recreativos.',
+        'footer-links': 'Enlaces',
+        'footer-contact': 'Contacto',
+        'footer-social': 'Redes Sociales',
+        'footer-copyright': '© 2023 Buceo Norte Iquique. Todos los derechos reservados.',
+        'footer-love': 'Hecho con amor ❤️ desde Iquique, Chile'
+      },
+      en: {
+        // Header
+        'home': 'Home',
+        'about': 'About Us',
+        'courses': 'Courses',
+        'services': 'Services',
+        'contact': 'Contact',
+        'signin': 'Sign In',
+        'register': 'Register',
+        
+        // Hero
+        'hero-title': 'Welcome to Buceo Norte',
+        'hero-subtitle': 'PADI & CMAS certified adventures in Iquique',
+        'cta-courses': 'Explore Courses',
+        'cta-book': 'Book a Dive',
+        
+        // About
+        'about-title': 'About Us',
+        'about-text': 'Buceo Norte is the leading dive center in Iquique, specializing in PADI and CMAS courses. Our team of certified instructors will guide you through every step of your underwater adventure.',
+        'about-mission': 'Our Mission',
+        'about-mission-text': 'To provide safe and memorable diving experiences while promoting the conservation of the marine environment of Iquique\'s coasts.',
+        'about-certifications': 'Certifications',
+        
+        // Courses
+        'courses-title': 'Our Courses',
+        'courses-subtitle': 'We offer a variety of courses for all levels, from beginners to advanced divers.',
+        'course1-title': 'Open Water Diver',
+        'course1-desc': 'Initial certification to start your underwater adventure.',
+        'course2-title': 'Advanced Open Water',
+        'course2-desc': 'Expand your skills and deepen your diving experience.',
+        'course3-title': 'Rescue Diver',
+        'course3-desc': 'Learn to prevent and manage diving emergencies.',
+        'more-info': 'More Info',
+        'all-courses': 'View All Courses',
+        'all-courses-title': 'All Our Courses',
+        'all-courses-subtitle': 'Explore our complete range of diving courses for all levels',
+        
+        // Services
+        'services-title': 'Our Services',
+        'services-subtitle': 'In addition to courses, we offer a variety of services for certified divers.',
+        'service1-title': 'Equipment Rental',
+        'service1-desc': 'Complete equipment for recreational and technical diving.',
+        'service2-title': 'Guided Dives',
+        'service2-desc': 'Explore the best dive sites in Iquique with our expert guides.',
+        'service3-title': 'Nitrox Fills',
+        'service3-desc': 'Enhance your dives with our Nitrox fill service.',
+        'service4-title': 'Wreck Diving',
+        'service4-desc': 'Specialized excursions to the famous wrecks in the area.',
+        'service5-title': 'Underwater Photography',
+        'service5-desc': 'Equipment rental and specialized underwater photography courses.',
+        'service6-title': 'Equipment Maintenance',
+        'service6-desc': 'Specialized technical service for all types of diving equipment.',
+        'all-services': 'View All Services',
+        'all-services-title': 'All Our Services',
+        'all-services-subtitle': 'Explore our complete range of professional diving services',
+        
+        // Las referencias a testimonios en inglés han sido eliminadas
+        
+        // Contact
+        'contact-title': 'Contact Us',
+        'contact-subtitle': 'Book your course or dive, or simply write us your questions.',
+        'contact-info': 'Contact Information',
+        'address-title': 'Address',
+        'phone-title': 'Phone',
+        'email-title': 'Email',
+        'follow-us': 'Follow Us',
+        'map-title': 'Location',
+        'contact-form-title': 'Contact Form',
+        'form-name': 'Name',
+        'form-email': 'Email',
+        'form-subject': 'Subject',
+        'form-subject-select': 'Select an option',
+        'form-subject-course': 'Course inquiry',
+        'form-subject-dive': 'Dive booking',
+        'form-subject-equipment': 'Equipment rental',
+        'form-subject-other': 'Other inquiry',
+        'form-message': 'Message',
+        'form-submit': 'Send Message',
+        
+        // Footer
+        'footer-about': 'PADI & CMAS dive center in Iquique, Chile. Specialized in courses and recreational diving.',
+        'footer-links': 'Links',
+        'footer-contact': 'Contact',
+        'footer-social': 'Social Media',
+        'footer-copyright': '© 2023 Buceo Norte Iquique. All rights reserved.',
+        'footer-love': 'Made with love ❤️ from Iquique, Chile'
+      }
+    };
+    // Currency data
+    const exchangeRate = 900; // 1 USD = 900 CLP
+    // Current language and currency
+    let currentLanguage = 'es';
+    let currentCurrency = 'clp';
+    // Function to update all text elements
+    function updateLanguage() {
+      const elements = document.querySelectorAll('[class*="lang-"]');
+      elements.forEach(element => {
+        const classes = element.className.split(' ');
+        const langClass = classes.find(cls => cls.startsWith('lang-'));
+        if (langClass) {
+          const key = langClass.replace('lang-', '');
+          if (languageData[currentLanguage][key]) {
+            element.textContent = languageData[currentLanguage][key];
+          }
+        }
+      });
+    }
+    // Function to update all prices
+    function updatePrices() {
+      const priceElements = document.querySelectorAll('.course-price');
+      priceElements.forEach(element => {
+        const clpPrice = element.getAttribute('data-clp');
+        const usdPrice = element.getAttribute('data-usd');
+        
+        if (currentCurrency === 'clp') {
+          element.textContent = `$${Number(clpPrice).toLocaleString('es-CL')} CLP`;
+        } else {
+          element.textContent = `$${usdPrice} USD`;
+        }
+      });
+    }
+    // Initialize language and currency
+    document.addEventListener('DOMContentLoaded', function() {
+      updateLanguage();
+      updatePrices();
+      
+      // Language toggle
+      document.getElementById('lang-es').addEventListener('click', function() {
+        if (currentLanguage !== 'es') {
+          currentLanguage = 'es';
+          updateLanguage();
+          document.getElementById('lang-es').classList.remove('bg-gray-700', 'text-gray-300');
+          document.getElementById('lang-es').classList.add('bg-gray-800', 'text-white');
+          document.getElementById('lang-en').classList.remove('bg-gray-800', 'text-white');
+          document.getElementById('lang-en').classList.add('bg-gray-700', 'text-gray-300');
+        }
+      });
+      
+      document.getElementById('lang-en').addEventListener('click', function() {
+        if (currentLanguage !== 'en') {
+          currentLanguage = 'en';
+          updateLanguage();
+          document.getElementById('lang-en').classList.remove('bg-gray-700', 'text-gray-300');
+          document.getElementById('lang-en').classList.add('bg-gray-800', 'text-white');
+          document.getElementById('lang-es').classList.remove('bg-gray-800', 'text-white');
+          document.getElementById('lang-es').classList.add('bg-gray-700', 'text-gray-300');
+        }
+      });
+      
+      // Currency toggle
+      document.getElementById('currency-clp').addEventListener('click', function() {
+        if (currentCurrency !== 'clp') {
+          currentCurrency = 'clp';
+          updatePrices();
+          document.getElementById('currency-clp').classList.remove('bg-gray-700', 'text-gray-300');
+          document.getElementById('currency-clp').classList.add('bg-gray-800', 'text-white');
+          document.getElementById('currency-usd').classList.remove('bg-gray-800', 'text-white');
+          document.getElementById('currency-usd').classList.add('bg-gray-700', 'text-gray-300');
+        }
+      });
+      
+      document.getElementById('currency-usd').addEventListener('click', function() {
+        if (currentCurrency !== 'usd') {
+          currentCurrency = 'usd';
+          updatePrices();
+          document.getElementById('currency-usd').classList.remove('bg-gray-700', 'text-gray-300');
+          document.getElementById('currency-usd').classList.add('bg-gray-800', 'text-white');
+          document.getElementById('currency-clp').classList.remove('bg-gray-800', 'text-white');
+          document.getElementById('currency-clp').classList.add('bg-gray-700', 'text-gray-300');
+        }
+      });
+      
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.remove('hidden');
+        document.getElementById('mobile-menu').classList.add('flex');
+      });
+      
+      document.getElementById('close-mobile-menu').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.remove('flex');
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+      
+      // Contact form submission
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert(currentLanguage === 'es' ? 
+          'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.' : 
+          'Thank you for your message. We will contact you soon.');
+        this.reset();
+      });
+      
+      // Scroll animations
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      fadeElements.forEach(element => {
+        fadeInObserver.observe(element);
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            // Mostrar la sección de todos los cursos si se hace clic en "Ver Todos los Cursos"
+            if (targetId === '#all-courses') {
+              document.querySelector('#all-courses').classList.remove('hidden');
+              // Asegurarse de que los elementos fade-in dentro de la sección sean visibles
+              document.querySelectorAll('#all-courses .fade-in').forEach(el => {
+                el.classList.add('visible');
+              });
+            }
+            
+            // Mostrar la sección de todos los servicios si se hace clic en "Ver Todos los Servicios"
+            if (targetId === '#all-services') {
+              document.querySelector('#all-services').classList.remove('hidden');
+              // Asegurarse de que los elementos fade-in dentro de la sección sean visibles
+              document.querySelectorAll('#all-services .fade-in').forEach(el => {
+                el.classList.add('visible');
+              });
+            }
+            
+            // La sección de testimonios ha sido eliminada
+            
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+              document.getElementById('mobile-menu').classList.add('hidden');
+              document.getElementById('mobile-menu').classList.remove('flex');
+            }
+          }
+        });
+      });
+      
+      // Actualizar precios cuando se cambia la moneda para la nueva sección de cursos
+      function updateAllCoursesPrices() {
+        document.querySelectorAll('#all-courses .course-price').forEach(priceElement => {
+          const clpPrice = priceElement.getAttribute('data-clp');
+          const usdPrice = priceElement.getAttribute('data-usd');
+          
+          if (currentCurrency === 'usd') {
+            priceElement.textContent = `$${usdPrice} USD`;
+          } else {
+            priceElement.textContent = `$${Number(clpPrice).toLocaleString('es-CL')} CLP`;
+          }
+        });
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,32 @@
+{
+  "team": [
+    {
+      "id": "hector",
+      "name": "Hector",
+      "role": "Instructor",
+      "bio": "Instructor certificado CMAS/PADI con mas de 15 años de experiencia en buceo en aguas abiertas. Especialista en Buceo Profesional.",
+      "image": "images/Hector.jpeg"
+    },
+    {
+      "id": "anibal",
+      "name": "Anibal",
+      "role": "Instructor",
+      "bio": "Instructor certificado PADI en buceo técnico y fotografía submarina. Guía certificado de buceo en naufragios.",
+      "image": "images/Anibal.jpeg"
+    },
+    {
+      "id": "rodrigo",
+      "name": "Rodrigo",
+      "role": "Instructor",
+      "bio": "Instructor certificado PADI de buceo en altitud y buceo bajo hielo. Especialista en seguridad submarina.",
+      "image": "images/Rodrigo.jpeg"
+    },
+    {
+      "id": "sergio",
+      "name": "Sergio",
+      "role": "Staff",
+      "bio": "Técnico de mantenimiento de equipos y coordinador de logística. Buzo profesional desde 2010.",
+      "image": "images/Sergio.jpeg"
+    }
+  ]
+}
