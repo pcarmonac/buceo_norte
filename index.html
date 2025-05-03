@@ -97,12 +97,12 @@
     </script>
     <style>
         .hero-section {
-            background-image: url('images/diver.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             height: 100vh;
             position: relative;
+            overflow: hidden;
         }
         
         .hero-overlay {
@@ -116,6 +116,39 @@
         .fade-in {
             opacity: 0;
             transition: opacity 0.6s ease-out;
+        }
+        
+        .carousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateX(100%);
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .carousel-slide.prev {
+            opacity: 0;
+            transform: translateX(-100%);
         }
         
         .fade-in.visible {
@@ -148,6 +181,10 @@
                 height: 85vh;
                 padding-top: 60px;
                 background-position: center;
+            }
+            
+            .carousel-slide {
+                background-attachment: scroll;
             }
             
             .hero-overlay {
@@ -253,6 +290,13 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section section">
+        <div class="carousel-container">
+            <div class="carousel-slide active" style="background-image: url('images/diver.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('images/D02.JPG');"></div>
+            <div class="carousel-slide" style="background-image: url('images/D03.JPG');"></div>
+            <div class="carousel-slide" style="background-image: url('images/D04.JPG');"></div>
+            <div class="carousel-slide" style="background-image: url('images/D05.JPG');"></div>
+        </div>
         <div class="hero-overlay absolute inset-0 flex items-center justify-center">
             <div class="container mx-auto px-4 text-center text-white">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in" data-delay="0.2s">
@@ -1371,6 +1415,35 @@
           'Thank you for your message. We will contact you soon.');
         this.reset();
       });
+      
+      // Carrusel de imágenes
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentSlide = 0;
+      
+      function nextSlide() {
+          // Marcar slide actual como prev
+          slides[currentSlide].classList.remove('active');
+          slides[currentSlide].classList.add('prev');
+          
+          // Actualizar índice
+          currentSlide = (currentSlide + 1) % slides.length;
+          
+          // Preparar siguiente slide
+          slides[currentSlide].classList.remove('prev');
+          slides[currentSlide].classList.add('active');
+          
+          // Limpiar clases prev después de la transición
+          setTimeout(() => {
+              document.querySelectorAll('.carousel-slide.prev').forEach(slide => {
+                  if (!slide.classList.contains('active')) {
+                      slide.classList.remove('prev');
+                  }
+              });
+          }, 1000);
+      }
+      
+      // Cambiar slide cada 10 segundos
+      setInterval(nextSlide, 5000);
       
       // Scroll animations
       const fadeElements = document.querySelectorAll('.fade-in');
