@@ -103,6 +103,7 @@
             height: 100vh;
             position: relative;
             overflow: hidden;
+            will-change: transform;
         }
         
         .hero-overlay {
@@ -139,6 +140,9 @@
             opacity: 0;
             transition: opacity 1s ease-in-out, transform 1s ease-in-out;
             transform: translateX(100%);
+            will-change: transform;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
         
         .carousel-slide.active {
@@ -177,14 +181,17 @@
 
         @media (max-width: 768px) {
             .hero-section {
-                background-attachment: scroll;
                 height: 85vh;
                 padding-top: 60px;
                 background-position: center;
             }
             
+            /* Mejoramos el efecto parallax para móviles */
             .carousel-slide {
-                background-attachment: scroll;
+                background-attachment: fixed;
+                will-change: transform;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
             }
             
             .hero-overlay {
@@ -1442,8 +1449,8 @@
           }, 1000);
       }
       
-      // Cambiar slide cada 10 segundos
-      setInterval(nextSlide, 5000);
+      // Cambiar slide cada 4 segundos
+      setInterval(nextSlide, 4000);
       
       // Scroll animations
       const fadeElements = document.querySelectorAll('.fade-in');
